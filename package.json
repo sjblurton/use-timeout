@@ -15,6 +15,14 @@
     "type": "git",
     "url": "https://github.com/sjblurton/use-timeout"
   },
+  "keywords": [
+    "react",
+    "hooks",
+    "custom",
+    "typescript",
+    "test",
+    "testing"
+  ],
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
