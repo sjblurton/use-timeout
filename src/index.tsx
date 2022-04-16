@@ -1,6 +1,35 @@
-import * as React from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
-// Delete me
-export const Thing = () => {
-  return <div>the snozzberries taste like snozzberries</div>;
+const useTimeout = (callback: any, delay: number) => {
+  const callbackRef = useRef(callback);
+  const timeoutRef: { current: NodeJS.Timeout | null } = useRef(null);
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  const set = useCallback(() => {
+    timeoutRef.current = setTimeout(() => callbackRef.current(), delay);
+  }, [delay]);
+
+  const clear = useCallback(() => {
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+  }, []);
+
+  useEffect(() => {
+    set();
+
+    return () => {
+      clear();
+    };
+  }, [delay, set, clear]);
+
+  const reset = useCallback(() => {
+    clear();
+    set();
+  }, [clear, set]);
+
+  return { reset, clear };
 };
+
+export default useTimeout;

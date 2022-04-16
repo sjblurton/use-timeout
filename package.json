@@ -7,6 +7,7 @@
     "dist",
     "src"
   ],
+  "type": "module",
   "engines": {
     "node": ">=10"
   },
@@ -33,7 +34,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "use-timeout",
+  "name": "@sjblurton/use-timeout",
   "author": "Simon Blurton",
   "module": "dist/use-timeout.esm.js",
   "size-limit": [
@@ -48,9 +49,16 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.8",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.1",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@testing-library/user-event": "^14.1.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.24",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "husky": "^7.0.4",
+    "jest": "^27.5.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "size-limit": "^7.0.8",
