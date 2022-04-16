@@ -11,6 +11,10 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjblurton/use-timeout"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
