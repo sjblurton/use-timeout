@@ -13,7 +13,7 @@ yarn add @sjblurton/use-timeout
 ### **To call the hook...**
 
 ```bash
-const { clear, reset } = useTimeout(() => callback(), 1000)
+const { clear, reset } = useTimeout(callback, 1000)
 ```
 
 ### **To clear timeout...**
